@@ -26,23 +26,6 @@ function usePosition(position) {
   datarequest(userPosition)
 }
 
-function showError(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            $("#cityarea").text("User denied the request for Geolocation.");
-            break;
-        case error.POSITION_UNAVAILABLE:
-          $("#cityarea").text("Location information is unavailable.");
-            break;
-        case error.TIMEOUT:
-            $("#cityarea").text("The request to get user location timed out.");
-            break;
-        case error.UNKNOWN_ERROR:
-            $("#cityarea").text("An unknown error occurred.");
-            break;
-    }
-}
-
 function input() {
   var usercity = "q=" + prompt("Please enter your name", "Your city");
   datarequest(usercity);
