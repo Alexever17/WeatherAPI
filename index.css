@@ -10,13 +10,31 @@ header {
   text-shadow: 2px 1px #333333;
   text-align: center;
   padding: 5px;
+  margin-bottom: 15px;
 }
 
-h1 {
+button {
+  background: transparent;
+  color: #333333;
+  min-width: 200px;
+  min-height: 50px;
+  border: 1px solid #8ce0ff;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
 
+.block {
+  text-align: center;
 }
 
 .weather-icon {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
+
+#temperaturarea {
+  font-size: 3em;
+  margin-bottom: 10px;
 }
