@@ -4,7 +4,7 @@ body {
   color: #333333;
 }
 
-header {
+.header {
   background: #8ce0ff;
   color: white;
   text-shadow: 2px 1px #333333;
