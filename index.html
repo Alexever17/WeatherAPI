@@ -6,30 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Look up the weather for your city.">
     <meta name="author" content="Oleksandr Malakhov / Alexever17">
+    <link href="index.css" rel="stylesheet">
     <link rel="icon" href="https://alexever17.github.com/img/favicon.gif" type="image/gif" sizes="16x16">
     <title>The Weather App</title>
-    <link href="index.css" rel="stylesheet">
   </head>
+
   <body>
-    <h1>Look up your Weather</h1>
-    <button type="submit" name="button" onclick="input()">Search</button>
-
-    <p id="cityarea">
-
-    </p>
-    <p id="weatherarea">
-
-    </p>
-    <p id="temperaturarea">
-
-    </p>
-    <p id="imagecode">
-
-    </p>
-
-
-
-
+    <header>
+      <h1>The Weather App</h1>
+    </header>
+    <div class="block cityblock">
+      <div id="cityarea"></div>
+      <div id="weatherarea"></div>
+    </div>
+    <div class="block">
+      <div id="temperaturarea"></div>
+      <button type="button" name="button">Change to Fahrenheit</button>
+    </div>
+    <div class="block">
+      <div id="imagecode"></div>
+      <button type="button" name="button">Show wind speed</button>
+    </div>
+    <div class="block">
+      <div class="othercity"></div>
+      <button type="button" name="button" onclick="input()">Search</button>
+    </div>
 
     <script src="jquery-3.2.1.min.js"></script>
     <script src="master.js"></script>

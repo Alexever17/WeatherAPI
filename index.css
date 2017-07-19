@@ -3,3 +3,20 @@ body {
   padding: 0;
   color: #333333;
 }
+
+header {
+  background: #8ce0ff;
+  color: white;
+  text-shadow: 2px 1px #333333;
+  text-align: center;
+  padding: 5px;
+}
+
+h1 {
+
+}
+
+.weather-icon {
+  width: 300px;
+  height: 300px;
+}
