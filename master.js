@@ -109,10 +109,10 @@ function imageGenf(imageText) {
 
 function fahrenheit() {
   if (fUsed) {
-    $("#temperaturarea").text(celsiusCache);
+    $("#temperaturarea").text(celsiusCache + "°C");
     fUsed = false;
   } else {
-    $("#temperaturarea").text(celsiusCache*9/5+32);
+    $("#temperaturarea").text(celsiusCache*9/5+32 + "°F");
     fUsed = true;
   }
 }
