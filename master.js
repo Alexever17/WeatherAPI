@@ -6,12 +6,28 @@ var celsiusCache = 0;
 var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 var cssDeployed = false;
 
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+
+
+
 getLocation();
+
 function getLocation() {
   if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(usePosition);
   } else {
-      $("#cityarea").innerHTML = "Geolocation is not supported by this browser. You can still use the manuell search.";
+      $("#cityarea").text("Geolocation is not supported by this browser. You can still use the manuell search.");
   }
 }
 
@@ -23,6 +39,23 @@ function usePosition(position) {
   }
   var userPosition = "lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
   datarequest(userPosition)
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            $("#cityarea").text("User denied the request for Geolocation.");
+            break;
+        case error.POSITION_UNAVAILABLE:
+          $("#cityarea").text("Location information is unavailable.");
+            break;
+        case error.TIMEOUT:
+            $("#cityarea").text("The request to get user location timed out.");
+            break;
+        case error.UNKNOWN_ERROR:
+            $("#cityarea").text("An unknown error occurred.");
+            break;
+    }
 }
 
 function input() {
