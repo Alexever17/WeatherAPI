@@ -1,7 +1,7 @@
 var key = "&appid=2f174dce58ac71c3a07312be6f6a114c";
 var baseurl = "http://api.openweathermap.org/data/2.5/weather?";
-var geourl = "http://api.openweathermap.org/data/2.5/weather?"
 var kelvinfactor = 273.15;
+var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
 getLocation();
 function getLocation() {
@@ -23,7 +23,7 @@ function input() {
 }
 
 function datarequest(parameter) {
-  var url = baseurl+parameter+key;
+  var url = cors_api_url+baseurl+parameter+key;
   $.ajax({
     url: url,
     success: function(data) {
