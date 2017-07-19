@@ -6,21 +6,6 @@ var celsiusCache = 0;
 var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 var cssDeployed = false;
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-}
-
-
-
 getLocation();
 
 function getLocation() {
